@@ -1,637 +1,350 @@
-<title>Miriam George — BA Portfolio</title>
-<meta name="description" content="Business Analyst — IT Projects portfolio: requirements, process analysis, and delivery work.">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miriam George | Account Administrator</title>
+<meta name="description" content="Miriam George, administration and operations coordinator in Dubai. Records, SLA-driven service delivery, invoice accuracy and reporting.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#1B2226;
-    --ink-soft:#57626A;
-    --ink-faint:#8B959B;
-    --paper:#F4F6F5;
-    --surface:#FFFFFF;
-    --line:#DBE1E3;
-    --line-soft:#E8ECED;
-    --accent:#B4732A;
-    --accent-ink:#7A4D1C;
-    --blue:#2E6690;
-    --green:#2F7A56;
-    --red:#B4452F;
-    --chip-bg:#ECEEE9;
-    --shadow: 0 1px 2px rgba(27,34,38,0.06), 0 8px 24px -12px rgba(27,34,38,0.12);
-    color-scheme: light;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --ink:#EAEDEE;
-      --ink-soft:#AAB6BC;
-      --ink-faint:#71818A;
-      --paper:#10161A;
-      --surface:#161E23;
-      --line:#293338;
-      --line-soft:#20282D;
-      --accent:#E3A15A;
-      --accent-ink:#F2C48B;
-      --blue:#7CB0DD;
-      --green:#5FBB8E;
-      --red:#E17A5C;
-      --chip-bg:#1D262B;
-      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -14px rgba(0,0,0,0.55);
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"]{
-    --ink:#EAEDEE;
-    --ink-soft:#AAB6BC;
-    --ink-faint:#71818A;
-    --paper:#10161A;
-    --surface:#161E23;
-    --line:#293338;
-    --line-soft:#20282D;
-    --accent:#E3A15A;
-    --accent-ink:#F2C48B;
-    --blue:#7CB0DD;
-    --green:#5FBB8E;
-    --red:#E17A5C;
-    --chip-bg:#1D262B;
-    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 28px -14px rgba(0,0,0,0.55);
-    color-scheme: dark;
-  }
+:root{
+  --paper:#EDF1EC;      /* security-paper mint */
+  --sheet:#F8FAF6;
+  --ink:#16282C;        /* file ink */
+  --ink-2:#4A5C5F;
+  --teal:#0F5257;       /* permit green-teal */
+  --teal-soft:#D5E4E1;
+  --amber:#C98A00;      /* SLA signal */
+  --stamp:#3E4FA3;      /* stamp blue */
+  --rule:#C7D3CF;
+  --w:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 "Public Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 112;margin:0;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(28px,3.4vw,40px);font-weight:750;max-width:20ch}
+.lede{color:var(--ink-2);max-width:60ch;margin:14px 0 0}
+section{padding:88px 0;border-top:1px solid var(--rule)}
 
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:
-      linear-gradient(var(--paper),var(--paper)),
-      repeating-linear-gradient(0deg, var(--line-soft) 0 1px, transparent 1px 32px),
-      repeating-linear-gradient(90deg, var(--line-soft) 0 1px, transparent 1px 32px);
-    background-blend-mode: normal;
-    color:var(--ink);
-    font-family:'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    -webkit-font-smoothing:antialiased;
-  }
-  .mono{ font-family:'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-size:15px}
+.top b{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 118;font-weight:800;font-size:18px}
+.top nav a{color:var(--ink);text-decoration:none;margin-left:22px}
+.top nav a:hover{color:var(--teal);text-decoration:underline}
 
-  .wrap{
-    max-width:920px;
-    margin:0 auto;
-    padding: 56px 20px 80px;
-  }
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:48px 0 96px}
+.hero h1{font-size:clamp(40px,5.6vw,72px);font-weight:800;font-variation-settings:"wdth" 108}
+.hero h1 span{display:block;font-variation-settings:"wdth" 62;font-weight:500;color:var(--teal)}
+.hero p{font-size:19px;color:var(--ink-2);max-width:48ch;margin:24px 0 32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--teal)}
+.btn.solid{background:var(--teal);color:#fff}
+.btn.solid:hover{background:var(--ink);border-color:var(--ink)}
+.btn.line{color:var(--teal)}
+.btn.line:hover{background:var(--teal-soft)}
 
-  a{ color:inherit; }
+/* pass card */
+.passwrap{position:relative;display:flex;justify-content:center}
+.lanyard{position:absolute;top:-70px;width:34px;height:96px;background:repeating-linear-gradient(90deg,var(--teal) 0 6px,#13666c 6px 12px);border-radius:3px}
+.pass{position:relative;width:min(360px,100%);background:var(--sheet);border-radius:18px;padding:26px 26px 22px;box-shadow:0 1px 0 var(--rule),0 22px 40px -18px rgba(15,82,87,.45);overflow:hidden;transform:rotate(-2deg)}
+.pass::before{content:"";position:absolute;inset:0;opacity:.55;pointer-events:none;
+  background:
+   repeating-radial-gradient(circle at 110% -10%,transparent 0 9px,rgba(15,82,87,.10) 9px 10px),
+   repeating-radial-gradient(circle at -20% 120%,transparent 0 11px,rgba(62,79,163,.08) 11px 12px)}
+.slot{width:64px;height:10px;border-radius:6px;background:var(--paper);margin:0 auto 20px;box-shadow:inset 0 1px 2px rgba(0,0,0,.15);position:relative}
+.pass-head{display:flex;gap:16px;align-items:center;position:relative}
+.mono{width:72px;height:84px;border-radius:10px;background:var(--teal);color:#fff;display:grid;place-items:center;font:800 28px "Archivo",sans-serif;font-variation-settings:"wdth" 120}
+.pass-head h3{font-size:24px;font-weight:800}
+.pass-head p{margin:4px 0 0;font-size:14px;color:var(--ink-2)}
+.fields{position:relative;margin:22px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;font-size:14px}
+.fields dt{color:var(--ink-2);font-size:12.5px}
+.fields dd{margin:2px 0 0;font-weight:600}
+.fields .full{grid-column:1/-1}
+.bar{position:relative;margin-top:20px;width:58%;height:34px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 9px,var(--ink) 9px 12px,transparent 12px 14px);opacity:.85;border-radius:2px}
+.stamp{position:absolute;right:22px;bottom:14px;border:3px solid var(--stamp);color:var(--stamp);border-radius:10px;padding:6px 12px;font:800 15px/1.1 "Archivo",sans-serif;font-variation-settings:"wdth" 75;text-align:center;transform:rotate(-12deg);opacity:.9;background:rgba(248,250,246,.6)}
+.stamp small{display:block;font-weight:500;font-size:11px}
+@media (prefers-reduced-motion:no-preference){
+  .stamp{animation:land .5s 0.7s cubic-bezier(.2,1.6,.4,1) both}
+  @keyframes land{from{transform:rotate(-12deg) scale(2.2);opacity:0}to{transform:rotate(-12deg) scale(1);opacity:.9}}
+}
 
-  /* ---------- top nav ---------- */
-  .topnav{
-    position:sticky; top:0;
-    z-index:20;
-    background: color-mix(in srgb, var(--paper) 88%, transparent);
-    backdrop-filter: blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  .topnav-inner{
-    max-width:920px; margin:0 auto;
-    padding:12px 20px;
-    display:flex; align-items:center; gap:18px;
-    overflow-x:auto;
-    scrollbar-width:none;
-  }
-  .topnav-inner::-webkit-scrollbar{ display:none; }
-  .brand{
-    font-family:'IBM Plex Mono'; font-size:13px; font-weight:600;
-    letter-spacing:.02em; white-space:nowrap; color:var(--accent-ink);
-    padding-right:6px; border-right:1px solid var(--line);
-  }
-  .navlinks{ display:flex; gap:4px; white-space:nowrap; }
-  .navlinks a{
-    text-decoration:none; font-size:13px; color:var(--ink-soft);
-    padding:6px 10px; border-radius:6px; font-weight:500;
-    display:flex; align-items:center; gap:6px;
-    transition: background .15s ease, color .15s ease;
-  }
-  .navlinks a:hover{ background:var(--chip-bg); color:var(--ink); }
-  .navlinks .num{ font-family:'IBM Plex Mono'; font-size:11px; color:var(--ink-faint); }
+/* process */
+.steps{list-style:none;padding:0;margin:44px 0 0;display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:s}
+.steps li{position:relative;padding:0 18px 0 0}
+.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--sheet);border:2px solid var(--teal);font:700 16px "Archivo",sans-serif;color:var(--teal);position:relative;z-index:1}
+.steps li::after{content:"";position:absolute;top:20px;left:40px;right:0;height:2px;background:var(--rule)}
+.steps li:last-child::after{display:none}
+.steps h3{font-size:19px;font-weight:700;margin:16px 0 6px;font-variation-settings:"wdth" 100}
+.steps p{margin:0;font-size:15px;color:var(--ink-2)}
 
-  /* ---------- hero ---------- */
-  .hero{ padding-top:8px; }
-  .badges{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px; }
-  .badge{
-    display:inline-flex; align-items:center; gap:6px;
-    font-family:'IBM Plex Mono'; font-size:12px; font-weight:500;
-    padding:5px 10px; border-radius:999px;
-    border:1px solid var(--line); background:var(--surface);
-    color:var(--ink-soft);
-  }
-  .badge .dot{ width:6px; height:6px; border-radius:50%; background:var(--green); flex:none; }
-  .badge.ticket{ color:var(--accent-ink); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+/* requirement map */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:36px 0 20px}
+.tabs button{font:600 15px "Public Sans",system-ui,sans-serif,system-ui,sans-serif;padding:9px 16px;border-radius:999px;border:1.5px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.map{background:var(--sheet);border-radius:14px;border:1px solid var(--rule);overflow:hidden}
+.row{display:grid;grid-template-columns:170px 1fr 1.3fr;gap:24px;padding:20px 24px;border-top:1px solid var(--rule);align-items:start}
+.row:first-child{border-top:0}
+.row[hidden]{display:none}
+.tag{font-size:13px;font-weight:600;color:var(--teal);background:var(--teal-soft);border-radius:999px;padding:3px 10px;justify-self:start}
+.row h3{font:600 16px/1.4 "Public Sans",system-ui,sans-serif;margin:0}
+.row p{margin:0;font-size:15.5px;color:var(--ink-2)}
+.row.gap .tag{color:#7a5400;background:#F3E4BF}
+.maphead{display:grid;grid-template-columns:170px 1fr 1.3fr;gap:24px;padding:0 24px 10px;font-size:13.5px;color:var(--ink-2)}
 
-  h1{
-    font-size:clamp(34px,6vw,52px);
-    line-height:1.04;
-    letter-spacing:-0.01em;
-    margin:0 0 6px;
-    font-weight:700;
-    text-wrap:balance;
-  }
-  .role{
-    font-size:clamp(17px,2.4vw,21px);
-    color:var(--accent-ink);
-    font-weight:600;
-    margin:0 0 20px;
-  }
-  .summary{
-    max-width:66ch;
-    font-size:16.5px;
-    line-height:1.65;
-    color:var(--ink-soft);
-    margin:0 0 26px;
-  }
+/* experience folders */
+.files{display:grid;gap:34px;margin-top:44px}
+.folder{position:relative;background:var(--sheet);border-radius:0 14px 14px 14px;border:1px solid var(--rule);padding:28px 30px 24px;margin-top:22px}
+.folder .tab-label{position:absolute;top:-34px;left:-1px;background:var(--sheet);border:1px solid var(--rule);border-bottom:0;border-radius:12px 12px 0 0;padding:7px 18px 9px;font-size:14px;font-weight:600;color:var(--teal)}
+.folder header{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.folder h3{font-size:24px;font-weight:750}
+.folder .when{color:var(--ink-2);font-size:15px}
+.folder .org{margin:4px 0 14px;color:var(--ink-2)}
+.folder ul{margin:0;padding-left:20px;columns:2;column-gap:40px}
+.folder li{break-inside:avoid;margin:0 0 9px;font-size:15.5px}
+.folder h4{font:600 16px "Public Sans",system-ui,sans-serif,system-ui,sans-serif;margin:20px 0 10px;color:var(--teal)}
 
-  .contact-row{ display:flex; flex-wrap:wrap; gap:10px; }
-  .contact-item{
-    display:flex; align-items:center; gap:8px;
-    background:var(--surface); border:1px solid var(--line);
-    border-radius:8px; padding:8px 12px;
-    font-size:13.5px; box-shadow:var(--shadow);
-  }
-  .contact-item svg{ width:15px; height:15px; flex:none; color:var(--ink-faint); }
-  .copy-btn{
-    border:none; background:var(--chip-bg); color:var(--ink-soft);
-    font-family:'IBM Plex Mono'; font-size:11px; font-weight:500;
-    padding:3px 8px; border-radius:5px; cursor:pointer;
-    transition: background .15s ease, color .15s ease;
-  }
-  .copy-btn:hover{ background:var(--accent); color:var(--surface); }
-  .copy-btn:focus-visible, a:focus-visible, .navlinks a:focus-visible{
-    outline:2px solid var(--accent); outline-offset:2px;
-  }
+/* projects */
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+.proj article{border-left:4px solid var(--amber);padding:4px 0 4px 22px}
+.proj h3{font-size:22px;font-weight:700;margin-bottom:8px}
+.proj p{margin:0;color:var(--ink-2)}
+.proj .used{margin-top:12px;font-size:14px;color:var(--ink)}
 
-  /* ---------- sections ---------- */
-  section{ margin-top:64px; scroll-margin-top:74px; }
-  .sec-head{
-    display:flex; align-items:baseline; gap:12px;
-    margin-bottom:22px;
-    border-bottom:1px solid var(--line);
-    padding-bottom:12px;
-  }
-  .sec-num{
-    font-family:'IBM Plex Mono'; font-size:13px; font-weight:600;
-    color:var(--accent-ink); flex:none;
-  }
-  .sec-title{ font-size:22px; font-weight:700; letter-spacing:-0.005em; }
-  .sec-sub{ margin-left:auto; font-family:'IBM Plex Mono'; font-size:11.5px; color:var(--ink-faint); white-space:nowrap; }
+/* education + skills */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.split h2{font-size:28px}
+.list{list-style:none;padding:0;margin:24px 0 0}
+.list li{padding:14px 0;border-top:1px solid var(--rule)}
+.list b{display:block;font-weight:600}
+.list span{color:var(--ink-2);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chips span{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:6px 12px;font-size:14.5px}
 
-  /* ---------- skills matrix ---------- */
-  .skills-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-  @media (max-width:640px){ .skills-grid{ grid-template-columns:1fr; } }
-  .skill-cat{
-    background:var(--surface); border:1px solid var(--line); border-radius:10px;
-    padding:16px 18px; box-shadow:var(--shadow);
-  }
-  .skill-cat h3{
-    margin:0 0 12px; font-size:13px; text-transform:uppercase; letter-spacing:.06em;
-    color:var(--ink-faint); font-family:'IBM Plex Mono'; font-weight:600;
-  }
-  .chips{ display:flex; flex-wrap:wrap; gap:7px; }
-  .chip{
-    font-size:13px; padding:5px 10px; border-radius:6px;
-    background:var(--chip-bg); color:var(--ink); font-weight:500;
-    border:1px solid transparent;
-  }
-  .chip.b1{ border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
-  .chip.b2{ border-color: color-mix(in srgb, var(--blue) 35%, transparent); }
-  .lang-row{ display:flex; gap:22px; flex-wrap:wrap; margin-top:16px; font-size:13.5px; color:var(--ink-soft); }
-  .lang-row b{ color:var(--ink); font-weight:600; }
+/* contact */
+.contact{background:var(--teal);color:#fff;border-radius:22px;padding:56px 48px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;margin:88px 0 40px}
+.contact h2{color:#fff;max-width:16ch}
+.contact p{color:#d6e7e5;margin:14px 0 0}
+.contact dl{margin:0;display:grid;gap:14px}
+.contact dt{font-size:13px;color:#b9d3d0}
+.contact dd{margin:2px 0 0;font-size:18px;font-weight:600}
+.contact a{color:#fff}
+footer{padding:0 0 40px;font-size:14px;color:var(--ink-2)}
 
-  /* ---------- experience ---------- */
-  .exp-card{
-    background:var(--surface); border:1px solid var(--line); border-radius:12px;
-    padding:22px 24px; box-shadow:var(--shadow);
-  }
-  .exp-top{ display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin-bottom:4px; }
-  .exp-title{ font-size:18px; font-weight:700; }
-  .exp-meta{ font-family:'IBM Plex Mono'; font-size:12px; color:var(--ink-faint); }
-  .exp-org{ color:var(--ink-soft); font-size:14px; margin-bottom:18px; }
-  .exp-cols{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
-  @media (max-width:680px){ .exp-cols{ grid-template-columns:1fr; } }
-  .exp-col h4{
-    margin:0 0 10px; font-size:12px; text-transform:uppercase; letter-spacing:.05em;
-    color:var(--accent-ink); font-family:'IBM Plex Mono'; font-weight:600;
-  }
-  .exp-col ul{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:12px; }
-  .exp-col li{
-    font-size:14px; line-height:1.55; color:var(--ink-soft);
-    padding-left:16px; position:relative;
-  }
-  .exp-col li::before{
-    content:""; position:absolute; left:0; top:7px;
-    width:6px; height:6px; border-radius:1px; background:var(--accent);
-    transform:rotate(45deg);
-  }
-
-  /* ---------- capstone ---------- */
-  .case{
-    background:var(--surface); border:1px solid var(--line); border-radius:14px;
-    padding:28px; box-shadow:var(--shadow);
-    position:relative; overflow:hidden;
-  }
-  .case::before{
-    content:""; position:absolute; inset:0 0 auto 0; height:4px;
-    background: linear-gradient(90deg, var(--accent), var(--blue), var(--green));
-  }
-  .case-eyebrow{
-    font-family:'IBM Plex Mono'; font-size:11.5px; color:var(--ink-faint);
-    letter-spacing:.06em; text-transform:uppercase; margin-bottom:8px;
-  }
-  .case h3{ font-size:21px; margin:0 0 6px; font-weight:700; text-wrap:balance; }
-  .case-meta{ font-size:13.5px; color:var(--ink-soft); margin-bottom:24px; }
-  .case-meta b{ color:var(--ink); }
-
-  .flow{ margin: 8px 0 30px; overflow-x:auto; }
-  .flow svg{ display:block; min-width:640px; width:100%; height:auto; }
-  .flow-label{ font-family:'IBM Plex Mono'; font-size:11px; font-weight:600; }
-  .flow-sub{ font-family:'IBM Plex Mono'; font-size:9.5px; }
-
-  .deliverables{
-    display:grid; grid-template-columns:1fr 1fr; gap:10px 20px;
-    margin-bottom:22px;
-  }
-  @media (max-width:640px){ .deliverables{ grid-template-columns:1fr; } }
-  .deliv{
-    display:flex; align-items:flex-start; gap:10px;
-    font-size:13.5px; line-height:1.5; color:var(--ink-soft);
-    padding:10px 0; border-bottom:1px solid var(--line-soft);
-  }
-  .deliv .check{
-    flex:none; width:18px; height:18px; border-radius:5px;
-    background: color-mix(in srgb, var(--green) 18%, transparent);
-    color:var(--green); display:flex; align-items:center; justify-content:center;
-    margin-top:1px;
-  }
-  .deliv .check svg{ width:11px; height:11px; }
-
-  .tool-row{ display:flex; flex-wrap:wrap; gap:7px; }
-  .tool-chip{
-    font-family:'IBM Plex Mono'; font-size:11.5px; font-weight:500;
-    padding:5px 10px; border-radius:6px;
-    background:var(--chip-bg); color:var(--ink-soft);
-  }
-
-  /* ---------- projects grid ---------- */
-  .proj-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-  @media (max-width:680px){ .proj-grid{ grid-template-columns:1fr; } }
-  .proj-card{
-    background:var(--surface); border:1px solid var(--line); border-radius:10px;
-    padding:18px 20px; box-shadow:var(--shadow);
-    display:flex; flex-direction:column; gap:10px;
-  }
-  .proj-card h3{ font-size:15.5px; margin:0; font-weight:700; }
-  .proj-tags{ display:flex; flex-wrap:wrap; gap:6px; }
-  .proj-tag{
-    font-family:'IBM Plex Mono'; font-size:10.5px; color:var(--blue);
-    background: color-mix(in srgb, var(--blue) 12%, transparent);
-    padding:3px 7px; border-radius:5px;
-  }
-  .proj-card p{ margin:0; font-size:13.5px; line-height:1.55; color:var(--ink-soft); }
-
-  /* ---------- education ---------- */
-  .edu-list{ display:flex; flex-direction:column; }
-  .edu-item{
-    display:flex; gap:20px; padding:16px 0;
-    border-bottom:1px solid var(--line-soft);
-  }
-  .edu-item:last-child{ border-bottom:none; }
-  .edu-year{ font-family:'IBM Plex Mono'; font-size:13px; color:var(--accent-ink); flex:none; width:52px; font-weight:600; }
-  .edu-name{ font-size:15px; font-weight:600; margin-bottom:2px; }
-  .edu-org{ font-size:13.5px; color:var(--ink-soft); }
-
-  /* ---------- footer / contact ---------- */
-  .footer{
-    margin-top:70px; padding-top:26px; border-top:1px solid var(--line);
-    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
-  }
-  .footer-note{ font-size:13px; color:var(--ink-faint); }
-  .footer .mono{ font-size:11.5px; }
-
-  @media (prefers-reduced-motion: reduce){
-    html{ scroll-behavior:auto; }
-    *{ transition:none !important; }
-  }
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:24px}
+  .passwrap{margin-top:70px}
+  .steps{grid-template-columns:1fr;gap:22px}
+  .steps li{padding:0 0 0 56px}
+  .steps li::before{position:absolute;left:0;top:0}
+  .steps li::after{left:19px;top:40px;bottom:-22px;right:auto;width:2px;height:auto}
+  .steps h3{margin-top:6px}
+  .row,.maphead{grid-template-columns:1fr;gap:8px}
+  .maphead{display:none}
+  .folder ul{columns:1}
+  .proj,.split,.contact{grid-template-columns:1fr}
+  .contact{padding:40px 24px}
+  .top nav{display:none}
+  section{padding:64px 0}
+}
 </style>
-
-<nav class="topnav">
-  <div class="topnav-inner">
-    <div class="navlinks">
-      <a href="#summary"><span class="num">01</span>Summary</a>
-      <a href="#skills"><span class="num">02</span>Skills</a>
-      <a href="#experience"><span class="num">03</span>Experience</a>
-      <a href="#capstone"><span class="num">04</span>Capstone</a>
-      <a href="#projects"><span class="num">05</span>Projects</a>
-      <a href="#education"><span class="num">06</span>Education</a>
-      <a href="#contact"><span class="num">07</span>Contact</a>
-    </div>
-  </div>
-</nav>
-
+</head>
+<body>
 <div class="wrap">
+  <header class="top">
+    <b>Miriam George</b>
+    <nav aria-label="Sections">
+      <a href="#process">How I work</a>
+      <a href="#fit">Role fit</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <div class="hero" id="summary">
-    <div class="badges">
-      <span class="badge"><span class="dot"></span>Open to new roles</span>
-      <span class="badge">📍 Dubai, UAE</span>
+  <main>
+  <div class="hero">
+    <div>
+      <h1>Records right. Requests moving. <span>Deadlines met.</span></h1>
+      <p>I'm an administration and operations coordinator in Dubai, applying for the Account Administrator role in Workforce Solutions. I keep people's records accurate, close requests within SLA, and turn raw data into reports managers can act on.</p>
+      <div class="btns">
+        <a class="btn solid" href="mailto:geomiriam@outlook.com?subject=Account%20Administrator%20role">Email me</a>
+        <a class="btn line" href="#fit">See how I match the role</a>
+      </div>
     </div>
 
-    <h1>Miriam George</h1>
-    <p class="role">Business Analyst — IT Projects</p>
-
-    <p class="summary">MBA graduate with hands-on experience gathering business requirements, analyzing operational processes, and translating stakeholder needs into reporting and workflow solutions within Emerson's MEA Lifecycle Services team. Experienced in requirements gathering, process documentation, workflow automation, stakeholder coordination, and end-user support using Power BI, Power Automate, SharePoint and Excel — with academic exposure to Agile delivery, Jira, Microsoft Project, and functional requirements planning.</p>
-
-    <div class="contact-row">
-      <span class="contact-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6l9 7 9-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
-        <span class="mono" id="email-text">geomiriam@outlook.com</span>
-        <button class="copy-btn" onclick="copyText('geomiriam@outlook.com', this)">Copy</button>
-      </span>
-      <span class="contact-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.4 2.1L8.1 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span class="mono">+971 50 938 2156</span>
-        <button class="copy-btn" onclick="copyText('+971 50 938 2156', this)">Copy</button>
-      </span>
+    <div class="passwrap" aria-label="Profile summary card">
+      <div class="lanyard" aria-hidden="true"></div>
+      <div class="pass">
+        <div class="slot" aria-hidden="true"></div>
+        <div class="pass-head">
+          <div class="mono" aria-hidden="true">MG</div>
+          <div>
+            <h3>Miriam George</h3>
+            <p>Administration &amp; Operations Coordinator</p>
+          </div>
+        </div>
+        <dl class="fields">
+          <div class="full"><dt>Applying for</dt><dd>Account Administrator, Workforce Solutions</dd></div>
+          <div><dt>Based in</dt><dd>Dubai, UAE</dd></div>
+          <div><dt>Experience</dt><dd>1.5+ years admin &amp; ops</dd></div>
+          <div><dt>Systems</dt><dd>Oracle, SAP, Salesforce</dd></div>
+          <div><dt>Licence</dt><dd>UAE driving licence</dd></div>
+        </dl>
+        <div class="stamp" aria-label="Available immediately">Available<small>immediately</small></div>
+        <div class="bar" aria-hidden="true"></div>
+      </div>
     </div>
   </div>
 
-  <section id="skills">
-    <div class="sec-head">
-      <span class="sec-num">02</span>
-      <span class="sec-title">Skills Matrix</span>
-      <span class="sec-sub">core competencies</span>
+  <section id="process">
+    <h2>How I handle every request</h2>
+    <p class="lede">Whether it's a training registration, a supplier query or a manager's ad hoc ask, I follow the same path from first contact to closed file.</p>
+    <ol class="steps">
+      <li><h3>Log it</h3><p>Record the request the moment it arrives, with the owner and the SLA it has to meet.</p></li>
+      <li><h3>Check the documents</h3><p>Confirm every detail and attachment is complete and correct before anything moves.</p></li>
+      <li><h3>Process it</h3><p>Follow the SOP and work instructions for that account, escalating early if a deadline is at risk.</p></li>
+      <li><h3>Update the record</h3><p>Keep the file accurate, confidential and easy to retrieve at any point in its life cycle.</p></li>
+      <li><h3>Report and improve</h3><p>Roll it into weekly and monthly reports, and simplify any step that keeps slowing the team down.</p></li>
+    </ol>
+  </section>
+
+  <section id="fit">
+    <h2>Your requirements, matched to my experience</h2>
+    <p class="lede">Each line of the role description, with where I've already done that work. Where I'm still learning, I say so.</p>
+
+    <div class="tabs" role="group" aria-label="Filter by area of the role">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="Financial" aria-pressed="false">Financial</button>
+      <button type="button" data-f="Customer" aria-pressed="false">Customer</button>
+      <button type="button" data-f="Process" aria-pressed="false">Process</button>
+      <button type="button" data-f="Innovation" aria-pressed="false">Innovation</button>
     </div>
 
-    <div class="skills-grid">
-      <div class="skill-cat">
-        <h3>Business Analysis</h3>
-        <div class="chips">
-          <span class="chip b1">Requirements Gathering</span>
-          <span class="chip b1">Business Process Analysis</span>
-          <span class="chip b1">Documentation</span>
-          <span class="chip b1">Data-Driven Decision Support</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <h3>Project Management</h3>
-        <div class="chips">
-          <span class="chip b2">Agile</span>
-          <span class="chip b2">Waterfall</span>
-          <span class="chip b2">Jira</span>
-          <span class="chip b2">Microsoft Project</span>
-          <span class="chip b2">Backlog Management</span>
-          <span class="chip b2">Stakeholder Management</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <h3>Process &amp; Technology</h3>
-        <div class="chips">
-          <span class="chip">Power BI</span>
-          <span class="chip">Power Automate</span>
-          <span class="chip">SharePoint</span>
-          <span class="chip">Excel (Pivot, VLOOKUP)</span>
-          <span class="chip">Oracle</span>
-          <span class="chip">CRM Platforms</span>
-          <span class="chip">Workflow Automation</span>
-          <span class="chip">KPI Reporting</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <h3>Communication &amp; Support</h3>
-        <div class="chips">
-          <span class="chip">End-User Training</span>
-          <span class="chip">Technical Writing</span>
-          <span class="chip">Cross-Functional Coordination</span>
-        </div>
-        <div class="lang-row">
-          <span><b>EN</b> Professional</span>
-          <span><b>HI</b> Intermediate</span>
-          <span><b>AR</b> Beginner</span>
-        </div>
-      </div>
+    <div class="maphead" aria-hidden="true"><span>Area</span><span>You need</span><span>Where I've done it</span></div>
+    <div class="map" id="map">
+      <div class="row" data-a="Financial"><span class="tag">Financial</span><h3>Accurate payment details and processing</h3><p>Did three-way matching of invoices, POs and delivery notes in Oracle and SAP, and checked documents with Finance before payments went out.</p></div>
+      <div class="row" data-a="Financial"><span class="tag">Financial</span><h3>Timely cash requests, claims and expenses</h3><p>Handled petty cash and checked expense receipts and claims during my procurement cover at Emerson.</p></div>
+      <div class="row" data-a="Customer"><span class="tag">Customer</span><h3>Onboarding and transition support</h3><p>Coordinated onboarding of participants onto training programmes across five MEA countries, from registration forms to confirmations and record updates.</p></div>
+      <div class="row" data-a="Customer"><span class="tag">Customer</span><h3>Tasks aligned to agreed SLAs</h3><p>First point of contact for managers and regional coordinators, logging each service request and tracking it through to resolution within SLA.</p></div>
+      <div class="row" data-a="Customer"><span class="tag">Customer</span><h3>Supporting key accounts</h3><p>Supported account teams on retail key accounts, including Giordano, at Digitizer Marketing Management.</p></div>
+      <div class="row" data-a="Process"><span class="tag">Process</span><h3>Employee life cycle records</h3><p>Kept personal details, registrations and completion documents accurate, confidential and audit-ready in Salesforce CRM and SharePoint.</p></div>
+      <div class="row" data-a="Process"><span class="tag">Process</span><h3>Weekly and monthly admin reports</h3><p>Produced weekly and monthly status reports for regional management in Excel and Power BI, tracking KPIs and SLA adherence.</p></div>
+      <div class="row" data-a="Process"><span class="tag">Process</span><h3>Following SOPs, SWIs and KPIs</h3><p>Followed and helped standardise team procedures, and planned my schedule around regional calendars so reports were ready on time.</p></div>
+      <div class="row gap" data-a="Process"><span class="tag">Learning</span><h3>Basic UAE labour law and processes</h3><p>This is where I'm newest. I'm building my knowledge of UAE labour law and visa processes so I can support your team from day one.</p></div>
+      <div class="row" data-a="Innovation"><span class="tag">Innovation</span><h3>Data dump management</h3><p>Turned raw exports from CRM and SharePoint into clean Excel and Power BI reports that replaced manual status chasing.</p></div>
+      <div class="row" data-a="Innovation"><span class="tag">Innovation</span><h3>Continuous improvement</h3><p>Built Power Automate flows linking Microsoft Forms, Excel and SharePoint to cut re-entry, backed by Lean and Six Sigma coursework.</p></div>
     </div>
   </section>
 
   <section id="experience">
-    <div class="sec-head">
-      <span class="sec-num">03</span>
-      <span class="sec-title">Professional Experience</span>
-      <span class="sec-sub">Aug 2025 – Jul 2026</span>
+    <h2>Experience on file</h2>
+    <div class="files">
+      <article class="folder">
+        <span class="tab-label">Aug 2025 to Jul 2026</span>
+        <header><h3>Education Services Coordinator</h3><span class="when">Operations &amp; Planning</span></header>
+        <p class="org">Emerson, Lifecycle Services MEA (Flow Control), Dubai</p>
+        <ul>
+          <li>Maintained training and participant records across five MEA countries, accurate and audit-ready.</li>
+          <li>First point of contact for managers and field teams, tracking every request against SLA.</li>
+          <li>Prepared weekly and monthly status reports for regional management.</li>
+          <li>Processed invoices and checked service records for accuracy before sign-off.</li>
+          <li>Handled ad hoc requests alongside scheduled work, re-prioritising to protect deadlines.</li>
+          <li>Set up role-based access in Power BI Service to keep confidential data protected.</li>
+          <li>Built Power Automate flows that cut manual follow-up and data re-entry.</li>
+          <li>Authored TechBriefs and co-authored the team newsletter.</li>
+        </ul>
+        <h4>Procurement Officer (cover)</h4>
+        <ul>
+          <li>Raised purchase orders in Oracle and tracked supplier commitments daily.</li>
+          <li>Three-way matched invoices, POs and delivery notes in Oracle and SAP.</li>
+          <li>Handled petty cash and checked expense receipts and claims.</li>
+          <li>Resolved price and quality issues across Procurement, Logistics and Finance.</li>
+        </ul>
+      </article>
+
+      <article class="folder">
+        <span class="tab-label">Mar 2025 to Aug 2025</span>
+        <header><h3>Sales Operations &amp; Admin Coordinator</h3></header>
+        <p class="org">Digitizer Marketing Management, Dubai</p>
+        <ul>
+          <li>Supported account teams on retail key accounts, including Giordano.</li>
+          <li>Maintained CRM records for customers, onboarding and projects.</li>
+          <li>Converted high-volume CRM data dumps into Excel reports for management.</li>
+          <li>Checked billing records and tracked account expenses to avoid payment discrepancies.</li>
+          <li>Handled ad hoc requests from managers and clients under deadline pressure.</li>
+          <li>Kept client metrics, sales leads and team records strictly confidential.</li>
+        </ul>
+      </article>
     </div>
+  </section>
 
-    <div class="exp-card">
-      <div class="exp-top">
-        <span class="exp-title">Services Coordinator — Operations &amp; Planning</span>
-        <span class="exp-meta">AUG 2025 – JUL 2026</span>
+  <section>
+    <h2>Two trackers that replaced manual follow-up</h2>
+    <div class="proj">
+      <article>
+        <h3>ASP Training Live Status Dashboard</h3>
+        <p>A live tracker of training registrations and records across five MEA countries, so regional teams could see status without chasing anyone.</p>
+        <p class="used">Microsoft Forms, SharePoint, Power Automate, Power BI</p>
+      </article>
+      <article>
+        <h3>OQGN Report &amp; Billing Tracker</h3>
+        <p>FY26 reporting and billing tracker across 11 Oman sites, with role-based access so each user sees only their own data.</p>
+        <p class="used">Power BI, Excel</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="split">
+      <div>
+        <h2>Education</h2>
+        <ul class="list">
+          <li><b>MBA, Service Operations &amp; Marketing</b><span>Manipal Academy of Higher Education, Dubai, 2025. Exchange semester at MILA University, Malaysia. Lean and Six Sigma coursework.</span></li>
+          <li><b>BBA, International Business, Economics &amp; Supply Chain Management</b><span>Madonna University, 2022</span></li>
+        </ul>
       </div>
-      <div class="exp-org">Emerson · Lifecycle Services MEA · Dubai, UAE</div>
-
-      <div class="exp-cols">
-        <div class="exp-col">
-          <h4>Requirements &amp; Process</h4>
-          <ul>
-            <li>Gathered requirements directly from regional business units and translated stakeholder needs into a Service Details Dashboard consolidating booking data, sales figures and service activity into a single operational view.</li>
-            <li>Conducted end-to-end requirements gathering for recurring data-collection needs, designing Microsoft Forms workflows for training nominations and service requests feeding into Excel and SharePoint.</li>
-            <li>Analyzed service-request handling against SLA timelines, identified process gaps and documented improvement requirements to strengthen execution accuracy across the MEA region.</li>
-            <li>Worked with cross-functional stakeholders to understand existing workflows, clarify business requirements and coordinate implementation of reporting improvements.</li>
-          </ul>
+      <div>
+        <h2>Tools and languages</h2>
+        <div class="chips">
+          <span>Excel (pivot tables, formulas)</span><span>Word</span><span>PowerPoint</span><span>Outlook</span><span>SharePoint</span><span>Microsoft Forms</span><span>Oracle</span><span>SAP</span><span>Salesforce CRM</span><span>Power BI</span><span>Power Automate</span>
         </div>
-        <div class="exp-col">
-          <h4>Delivery, Testing &amp; Support</h4>
-          <ul>
-            <li>Maintained and reconciled customer training and CRM records, ensuring data integrity across systems used for reporting and business decisions.</li>
-            <li>Provided end-user support and documentation for Forms- and SharePoint-based workflows, helping regional teams adopt new data processes with minimal disruption.</li>
-            <li>Supported testing and validation of workflow and reporting changes by checking outputs against business requirements and stakeholder expectations, following up on required enhancements.</li>
-            <li>Tracked supplier commitments and open purchase orders as part of procurement expediting responsibilities, using structured trackers to flag delays and actions requiring closure.</li>
-          </ul>
-        </div>
+        <ul class="list">
+          <li><b>Certifications</b><span>Google Data Analytics Professional Certificate. One Million Prompters, Dubai Future Foundation.</span></li>
+          <li><b>Languages</b><span>English (professional), Hindi (intermediate), Arabic and French (beginner)</span></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="capstone">
-    <div class="sec-head">
-      <span class="sec-num">04</span>
-      <span class="sec-title">Academic Capstone — Case Study</span>
-      <span class="sec-sub">MBA group project</span>
+  <div class="contact" id="contact">
+    <div>
+      <h2>Let's talk about your key accounts</h2>
+      <p>I'm available to start immediately.</p>
     </div>
+    <dl>
+      <div><dt>Email</dt><dd><a href="mailto:geomiriam@outlook.com">geomiriam@outlook.com</a></dd></div>
+      <div><dt>Phone</dt><dd><a href="tel:+971509382156">+971 50 938 2156</a></dd></div>
+      <div><dt>Location</dt><dd>Dubai, UAE</dd></div>
+    </dl>
+  </div>
+  </main>
 
-    <div class="case">
-      <div class="case-eyebrow">Case Study · MBA-CAP-2025</div>
-      <h3>Business Process Automation &amp; IT Solution Implementation</h3>
-      <div class="case-meta">Led a <b>4-member team</b> through a full requirements-to-deployment cycle for a simulated business workflow and service-request process · <b>2025</b></div>
-
-      <div class="flow" aria-label="Project lifecycle: Requirements, Design, Build, Test / UAT, Deploy">
-        <svg viewBox="0 0 720 90" xmlns="http://www.w3.org/2000/svg" style="color:var(--ink-soft)">
-          <defs>
-            <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,0 L8,4 L0,8 z" fill="var(--ink-faint)"></path>
-            </marker>
-          </defs>
-          <line x1="70" y1="45" x2="650" y2="45" stroke="var(--line)" stroke-width="2" marker-end="url(#arrow)"></line>
-
-          <g>
-            <circle cx="50" cy="45" r="26" fill="var(--surface)" stroke="var(--accent)" stroke-width="2.5"></circle>
-            <text x="50" y="49" text-anchor="middle" fill="var(--ink)" class="flow-label" font-family="IBM Plex Mono">01</text>
-            <text x="50" y="82" text-anchor="middle" fill="var(--ink)" class="flow-label" font-family="IBM Plex Mono">Requirements</text>
-          </g>
-          <g>
-            <circle cx="195" cy="45" r="26" fill="var(--surface)" stroke="var(--blue)" stroke-width="2.5"></circle>
-            <text x="195" y="49" text-anchor="middle" fill="var(--ink)" class="flow-label" font-family="IBM Plex Mono">02</text>
-            <text x="195" y="82" text-anchor="middle" fill="var(--ink)" class="flow-label" font-family="IBM Plex Mono">Design</text>
-          </g>
-          <g>
-            <circle cx="340" cy="45" r="26" fill="var(--surface)" stroke="var(--blue)" stroke-width="2.5"></circle>
-            <text x="340" y="49" text-anchor="middle" fill="var(--ink)" class="flow-label" font-family="IBM Plex Mono">03</text>
-            <text x="340" y="82" text-anchor="middle" fill="var(--ink)" class="flow-label" font-family="IBM Plex Mono">Build</text>
-          </g>
-          <g>
-            <circle cx="490" cy="45" r="26" fill="var(--surface)" stroke="var(--green)" stroke-width="2.5"></circle>
-            <text x="490" y="49" text-anchor="middle" fill="var(--ink)" class="flow-label" font-family="IBM Plex Mono">04</text>
-            <text x="490" y="82" text-anchor="middle" fill="var(--ink)" class="flow-label" font-family="IBM Plex Mono">Test / UAT</text>
-          </g>
-          <g>
-            <circle cx="650" cy="45" r="26" fill="var(--surface)" stroke="var(--green)" stroke-width="2.5"></circle>
-            <text x="650" y="49" text-anchor="middle" fill="var(--ink)" class="flow-label" font-family="IBM Plex Mono">05</text>
-            <text x="650" y="82" text-anchor="middle" fill="var(--ink)" class="flow-label" font-family="IBM Plex Mono">Deploy</text>
-          </g>
-        </svg>
-      </div>
-
-      <div class="deliverables">
-        <div class="deliv"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>Stakeholder interviews &amp; requirements-gathering workshops</div>
-        <div class="deliv"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>Business &amp; functional requirements documented via BPMN/Visio</div>
-        <div class="deliv"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>Jira backlog — prioritized user stories &amp; sprint tracking</div>
-        <div class="deliv"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>Microsoft Project implementation plan through deployment</div>
-        <div class="deliv"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>Feasibility, impact &amp; risk analysis</div>
-        <div class="deliv"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>UAT test scenarios, acceptance criteria &amp; defect tracking</div>
-        <div class="deliv"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>Stakeholder feedback &amp; enhancement documentation</div>
-        <div class="deliv"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>User documentation, training material &amp; solution presentation</div>
-      </div>
-
-      <div class="tool-row">
-        <span class="tool-chip">AGILE</span>
-        <span class="tool-chip">WATERFALL</span>
-        <span class="tool-chip">JIRA</span>
-        <span class="tool-chip">MICROSOFT PROJECT</span>
-        <span class="tool-chip">BPMN</span>
-        <span class="tool-chip">VISIO</span>
-        <span class="tool-chip">UAT</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="sec-head">
-      <span class="sec-num">05</span>
-      <span class="sec-title">Projects &amp; Certifications</span>
-      <span class="sec-sub">selected work</span>
-    </div>
-
-    <div class="proj-grid">
-      <div class="proj-card">
-        <h3>Live Status Dashboard</h3>
-        <div class="proj-tags"><span class="proj-tag">POWER BI</span><span class="proj-tag">EXCEL</span><span class="proj-tag">SHAREPOINT</span></div>
-        <p>Built a live KPI dashboard tracking e-learning and training completion across five MEA countries, consolidating multi-source data to surface gaps stakeholders couldn't previously see.</p>
-      </div>
-      <div class="proj-card">
-        <h3>Reporting Dashboard — Reliability Team</h3>
-        <div class="proj-tags"><span class="proj-tag">POWER BI</span><span class="proj-tag">EXCEL</span></div>
-        <p>Developed a reporting dashboard covering 11 sites across Oman and 121 tracked service tags for FY26, resolving a data-access issue so every stakeholder saw accurate figures.</p>
-      </div>
-      <div class="proj-card">
-        <h3>Real Estate Market Research</h3>
-        <div class="proj-tags"><span class="proj-tag">EXCEL</span><span class="proj-tag">MARKET ANALYSIS</span></div>
-        <p>Analyzed Dubai real estate market data — pricing trends, project specs and competitor positioning — applying rental yield and absorption-rate metrics to structure presentation-ready insights.</p>
-      </div>
-      <div class="proj-card">
-        <h3>Google Data Analytics Certificate</h3>
-        <div class="proj-tags"><span class="proj-tag">COMPLETED</span></div>
-        <p>Covers data cleaning, analysis, visualization and data-driven decision-making, applied directly to translating stakeholder requirements into working reporting solutions.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="sec-head">
-      <span class="sec-num">06</span>
-      <span class="sec-title">Education</span>
-      <span class="sec-sub">academic background</span>
-    </div>
-
-    <div class="edu-list">
-      <div class="edu-item">
-        <span class="edu-year">2025</span>
-        <div>
-          <div class="edu-name">Master of Business Administration — Services Operations Management &amp; Marketing</div>
-          <div class="edu-org">Manipal Academy of Higher Education, Dubai</div>
-        </div>
-      </div>
-      <div class="edu-item">
-        <span class="edu-year">2024</span>
-        <div>
-          <div class="edu-name">MBA Exchange Program</div>
-          <div class="edu-org">MILA University, Malaysia</div>
-        </div>
-      </div>
-      <div class="edu-item">
-        <span class="edu-year">2022</span>
-        <div>
-          <div class="edu-name">Bachelor of Business Administration — International Business in Economics &amp; Supply Chain Management</div>
-          <div class="edu-org">Madonna University</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="sec-head">
-      <span class="sec-num">07</span>
-      <span class="sec-title">Contact</span>
-      <span class="sec-sub">let's talk</span>
-    </div>
-    <p class="summary" style="margin-bottom:22px;">Open to Business Analyst and IT Projects roles across Dubai and the wider UAE. Reach out directly — happy to walk through any of the work above in more detail.</p>
-    <div class="contact-row">
-      <span class="contact-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6l9 7 9-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
-        <span class="mono">geomiriam@outlook.com</span>
-        <button class="copy-btn" onclick="copyText('geomiriam@outlook.com', this)">Copy</button>
-      </span>
-      <span class="contact-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.4 2.1L8.1 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span class="mono">+971 50 938 2156</span>
-        <button class="copy-btn" onclick="copyText('+971 50 938 2156', this)">Copy</button>
-      </span>
-      <span class="contact-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-        <span class="mono">Dubai, UAE</span>
-      </span>
-    </div>
-
-    <div class="footer">
-      <span class="footer-note">Miriam George · Business Analyst, IT Projects</span>
-      <span class="footer-note mono">Last updated 2026</span>
-    </div>
-  </section>
-
+  <footer>Miriam George, 2026</footer>
 </div>
 
 <script>
-  function copyText(text, btn){
-    var original = btn.textContent;
-    function done(ok){
-      btn.textContent = ok ? 'Copied' : 'Select text';
-      setTimeout(function(){ btn.textContent = original; }, 1400);
-    }
-    try{
-      if(navigator.clipboard && navigator.clipboard.writeText){
-        navigator.clipboard.writeText(text).then(function(){ done(true); }).catch(function(){ done(false); });
-      } else { done(false); }
-    } catch(e){ done(false); }
-  }
+const btns=document.querySelectorAll('.tabs button'),rows=document.querySelectorAll('#map .row');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  btns.forEach(x=>x.setAttribute('aria-pressed',x===b));
+  const f=b.dataset.f;
+  rows.forEach(r=>r.hidden=!(f==='all'||r.dataset.a===f));
+}));
 </script>
+</body>
+</html>
